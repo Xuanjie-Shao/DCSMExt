@@ -38,7 +38,7 @@ sel.pairs = obs_extdep.emp = risk = weight_fun = dWeight_fun = NULL
 ################################################################################
 # Simulate data
 phi = 0.2; kappa = 1
-use_existing_dat = F
+use_existing_dat = F # T for using provided existing data
 if (use_existing_dat) {
   # Download the data from https://zenodo.org/records/15459157, and place it in SimData/.
   # WARNING:The whole script requires approximately 6GB memory using provided data.
@@ -51,7 +51,7 @@ if (use_existing_dat) {
 }
 
 
-risk_type = "site"           # "max", "sum", or "site"
+risk_type = "max"           # "max", "sum", or "site"
 if (model %in% c("r-Pareto", "AI")) {
   site.index = NULL
   if (risk_type == "max") {
@@ -206,9 +206,11 @@ S.warped_tru = sim$swarped
 D.true = rdist(S.warped_tru)
 D.warped = rdist(S.warped)
 
-plot(as.matrix(d1$swarped))
-plot(S.warped)
-
+# plot(as.matrix(d1$swarped))
+par(mfrow = c(1,2))
+plot(sim$swarped, xlab = "f1", ylab = "f2")
+plot(S.warped, xlab = "f1", ylab = "f2")
+par(mfrow = c(1,1))
 
 if (use_existing_dat) {
   # site.index = 5000
