@@ -9,7 +9,7 @@ Folders and documents in Scripts&Codes:
 5. simulation_Archi3.R: the script for a simulation demo, which can simulate r-Pareto processes with the provided risk functional and other hyperparameters. As the simulation of r-Pareto processes using max-functional is time-consuming, we also provide simulated data used in our simulation study, which must be downloaded from [Zenodo](https://zenodo.org/records/15459157) for site-, max-, and sum-functionals, and placed in SimData/. 
 
 
-Remarks: Current program works for Tensorflow version 2.11.0 and Python version 3.7.11. Some updated Tensorflow version, e.g., 2.19.0, is not compatible. Implementing scripts requires the installation of the Python language, Tensorflow, and TensorFlow packages in R.
+Remarks: The current program works for Tensorflow version 2.11.0 and Python version 3.7.11. Some updated Tensorflow version, e.g., 2.19.0, is not compatible. Implementing scripts requires the installation of the Python language, TensorFlow, and TensorFlow packages in R.
 
 
 How to Start:
