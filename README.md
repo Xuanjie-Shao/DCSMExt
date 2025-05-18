@@ -14,4 +14,4 @@ Remarks: The current program works for Tensorflow version 2.11.0 and Python vers
 
 How to Start:
 1. Install the corresponding software and packages.
-2. Implement simulation_Archi3.R or application_UKpr.R for the simulation demo or the data application.
+2. Implement simulation.R or application_UKpr.R for the simulation demo or the data application.
