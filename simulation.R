@@ -51,12 +51,11 @@ if (use_existing_dat) {
   n = (1/ds+1)^2
 }
 
-
-risk_type = "max"           # "max", "sum", or "site"
+# WARNING: data generation using max functional is emteremely slow for high dimension
+risk_type = "sum"           # "max", "sum", or "site"
 if (model %in% c("r-Pareto", "AI")) {
   site.index = NULL
   if (risk_type == "max") {
-    # WARNING: data generation using max functional is emteremely slow for high dimension
     risk_fun = risk_type
     # risk_fun = function(rep) { sum(rep^20)^{1/20} }
   } else if (risk_type == "sum") {
