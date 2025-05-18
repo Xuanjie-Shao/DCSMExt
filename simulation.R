@@ -46,6 +46,7 @@ if (use_existing_dat) {
   trep = 5000L; ds = 0.01
   n = (1/ds+1)^2 #10201
 } else {
+  # a smaller dataset
   trep = 5000L; ds = 0.025
   n = (1/ds+1)^2
 }
