@@ -26,11 +26,17 @@ source("Functions/deepspat_ext_main.R")
 source("Functions/predict.deepspat_ext.R")
 source("Functions/save_and_load.R")
 
-# WARNING:The whole script requires approximately 15GB memory.
 ################################################################################
 # load data
 # --------------------------------
 app_data = "UKpr"
+work_dir = "AppData/"
+if (!dir.exists(work_dir)) {dir.create(work_dir)}
+
+
+# Download the data from https://zenodo.org/records/15459157, and place it in AppData/.
+# WARNING:The whole script requires approximately 15GB memory.
+# See https://github.com/shaox0a/DCSMExt for details
 load("AppData/UKpr_waleswindow.rds")
 # --------------------------------
 
